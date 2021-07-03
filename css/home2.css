@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
+/* line 30, ../scss/home2.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 36, ../scss/home2.scss */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* line 42, ../scss/home2.scss */
+body {
+  font-family: "Noto Serif JP", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* line 49, ../scss/home2.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 54, ../scss/home2.scss */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 61, ../scss/home2.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 65, ../scss/home2.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 70, ../scss/home2.scss */
+.inner {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  /* line 70, ../scss/home2.scss */
+  .inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* line 81, ../scss/home2.scss */
+.section {
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  /* line 81, ../scss/home2.scss */
+  .section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+
+/* line 92, ../scss/home2.scss */
+.header {
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 1300px;
+  z-index: 300;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  /* line 92, ../scss/home2.scss */
+  .header {
+    height: 60px;
+  }
+}
+
+/* line 107, ../scss/home2.scss */
+.header__inner {
+  align-items: center;
+  height: inherit;
+  display: flex;
+  width: 100%;
+}
+
+/* line 113, ../scss/home2.scss */
+.header__logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 116, ../scss/home2.scss */
+.header__logo img {
+  width: 195px;
+  height: 220px;
+}
+
+/* line 121, ../scss/home2.scss */
+.nav {
+  margin-right: auto;
+  margin-right: 10px;
+  margin-left: auto;
+}
+/* line 125, ../scss/home2.scss */
+.nav ul {
+  display: flex;
+  margin-left: auto;
+  font-size: 22px;
+}
+/* line 130, ../scss/home2.scss */
+.nav ul .li-contact {
+  background-color: rgba(255, 102, 51, 0.7);
+  border-radius: 5px;
+  padding: 15px;
+}
+/* line 136, ../scss/home2.scss */
+.nav li {
+  margin-left: 40px;
+}
+/* line 139, ../scss/home2.scss */
+.nav li:last-child {
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  /* line 121, ../scss/home2.scss */
+  .nav {
+    display: none;
+  }
+}
+
+/* line 151, ../scss/home2.scss */
+.drawer-icon {
+  position: fixed;
+  right: 16px;
+  top: 20px;
+  z-index: 400;
+  display: none;
+  transition: transform 0.5s ease 0s;
+}
+@media (max-width: 767px) {
+  /* line 151, ../scss/home2.scss */
+  .drawer-icon {
+    display: block;
+  }
+}
+/* line 163, ../scss/home2.scss */
+.drawer-icon.is-active {
+  transform: translateX(-200px);
+}
+/* line 166, ../scss/home2.scss */
+.drawer-icon.is-active .drawer-icon__bar1 {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+/* line 170, ../scss/home2.scss */
+.drawer-icon.is-active .drawer-icon__bar2 {
+  display: none;
+}
+/* line 174, ../scss/home2.scss */
+.drawer-icon.is-active .drawer-icon__bar3 {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+/* line 182, ../scss/home2.scss */
+.drawer-icon__bars {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0;
+}
+
+/* line 189, ../scss/home2.scss */
+.drawer-icon__bar1,
+.drawer-icon__bar2,
+.drawer-icon__bar3 {
+  position: absolute;
+  background: #C0C0C0;
+  border: 1px solid #C0C0C0;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 4px;
+}
+
+/* line 201, ../scss/home2.scss */
+.drawer-icon__bar1 {
+  top: 0;
+}
+
+/* line 204, ../scss/home2.scss */
+.drawer-icon__bar2 {
+  top: 8px;
+}
+
+/* line 208, ../scss/home2.scss */
+.drawer-icon__bar3 {
+  top: 16px;
+}
+
+/* line 212, ../scss/home2.scss */
+.drawer-icon__label {
+  font-size: 50%;
+}
+
+/* line 216, ../scss/home2.scss */
+.drawer-content {
+  width: 200px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  z-index: 399;
+  transform: translateX(105%);
+  transition: transform 0.5s ease 0s;
+}
+/* line 228, ../scss/home2.scss */
+.drawer-content.is-active {
+  transform: translateX(0);
+}
+
+/* line 236, ../scss/home2.scss */
+.drawer-content__item {
+  border-bottom: 1px dotted #707070;
+}
+/* line 239, ../scss/home2.scss */
+.drawer-content__item a {
+  display: block;
+  color: #707070;
+  padding: 20px;
+  text-decoration: none;
+  position: relative;
+}
+/* line 246, ../scss/home2.scss */
+.drawer-content__item a::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 11px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 259, ../scss/home2.scss */
+.drawer-background {
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 398;
+  display: none;
+}
+/* line 269, ../scss/home2.scss */
+.drawer-background.is-active {
+  display: block;
+}
+
+/* line 275, ../scss/home2.scss */
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1300px;
+  max-width: 100%;
+}
+
+/* line 291, ../scss/home2.scss */
+.main__visual__img {
+  position: relative;
+}
+
+/* line 306, ../scss/home2.scss */
+.main__video__inner iframe {
+  width: 100%;
+  height: 800px;
+}
+
+/* line 311, ../scss/home2.scss */
+.main__visual__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 317, ../scss/home2.scss */
+.main__visual__logo p {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* line 324, ../scss/home2.scss */
+.main__visual2 {
+  margin-top: 100px;
+}
+
+/* line 330, ../scss/home2.scss */
+.main__visual__bg2 {
+  background: url(../img/bread4.jpeg) no-repeat center center/cover;
+  height: 800px;
+  width: 100%;
+  position: relative;
+}
+
+/* line 336, ../scss/home2.scss */
+.main__visual__logo2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 342, ../scss/home2.scss */
+.main__visual__logo2 p {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* line 347, ../scss/home2.scss */
+.header2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1300px;
+  z-index: 300;
+  color: #FFF;
+}
+@media (max-width: 767px) {
+  /* line 347, ../scss/home2.scss */
+  .header2 {
+    height: 60px;
+  }
+}
+
+/* line 361, ../scss/home2.scss */
+.header__inner2 {
+  height: inherit;
+  width: 100%;
+}
+
+/* line 366, ../scss/home2.scss */
+.nav2 {
+  margin-top: 100px;
+}
+/* line 368, ../scss/home2.scss */
+.nav2 ul {
+  margin-left: 50px;
+}
+/* line 374, ../scss/home2.scss */
+.nav2 li {
+  margin-bottom: 50px;
+}
+/* line 377, ../scss/home2.scss */
+.nav2 li:last-child {
+  margin-bottom: 0;
+}
+/* line 385, ../scss/home2.scss */
+.nav2 .home {
+  position: relative;
+}
+/* line 389, ../scss/home2.scss */
+.nav2 .home:after {
+  position: absolute;
+  content: "HOME";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: 0;
+}
+/* line 398, ../scss/home2.scss */
+.nav2 .news {
+  position: relative;
+}
+/* line 402, ../scss/home2.scss */
+.nav2 .news:after {
+  position: absolute;
+  content: "NEWS";
+  width: 30px;
+  height: 20px;
+  top: 30px;
+  left: 0;
+}
+/* line 411, ../scss/home2.scss */
+.nav2 .bread {
+  position: relative;
+}
+/* line 415, ../scss/home2.scss */
+.nav2 .bread:after {
+  position: absolute;
+  content: "BREAD";
+  width: 30px;
+  height: 20px;
+  top: 30px;
+  left: 0;
+}
+/* line 424, ../scss/home2.scss */
+.nav2 .access {
+  position: relative;
+}
+/* line 428, ../scss/home2.scss */
+.nav2 .access:after {
+  position: absolute;
+  content: "ACCESS";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: 0;
+}
+/* line 437, ../scss/home2.scss */
+.nav2 .contact {
+  position: relative;
+}
+/* line 441, ../scss/home2.scss */
+.nav2 .contact:after {
+  position: absolute;
+  content: "CONTACT";
+  width: 30px;
+  height: 20px;
+  top: 30px;
+  left: 0;
+}
+/* line 450, ../scss/home2.scss */
+.nav2 .online {
+  position: relative;
+}
+/* line 454, ../scss/home2.scss */
+.nav2 .online:after {
+  position: absolute;
+  content: "ONLINE SHOP";
+  width: 30px;
+  height: 20px;
+  top: 30px;
+  left: 0;
+}

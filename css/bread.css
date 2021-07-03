@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
+/* line 30, ../scss/bread.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 36, ../scss/bread.scss */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* line 42, ../scss/bread.scss */
+body {
+  font-family: "Noto Serif JP", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* line 49, ../scss/bread.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 54, ../scss/bread.scss */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 61, ../scss/bread.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 65, ../scss/bread.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 70, ../scss/bread.scss */
+.inner {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  /* line 70, ../scss/bread.scss */
+  .inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* line 81, ../scss/bread.scss */
+.section {
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  /* line 81, ../scss/bread.scss */
+  .section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+
+/* line 92, ../scss/bread.scss */
+.header {
+  height: 100px;
+  top: 0;
+  left: 0;
+  width: 1300px;
+  z-index: 300;
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  /* line 92, ../scss/bread.scss */
+  .header {
+    height: 60px;
+  }
+}
+
+/* line 106, ../scss/bread.scss */
+.header__inner {
+  align-items: center;
+  height: inherit;
+  display: flex;
+  width: 100%;
+}
+
+/* line 112, ../scss/bread.scss */
+.nav {
+  margin: 0 auto;
+}
+/* line 114, ../scss/bread.scss */
+.nav ul {
+  display: flex;
+}
+/* line 117, ../scss/bread.scss */
+.nav li {
+  margin-left: 100px;
+}
+/* line 120, ../scss/bread.scss */
+.nav li:first-child {
+  margin-left: 0;
+}
+/* line 128, ../scss/bread.scss */
+.nav .home {
+  position: relative;
+}
+/* line 132, ../scss/bread.scss */
+.nav .home:after {
+  position: absolute;
+  content: "HOME";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -5px;
+}
+/* line 141, ../scss/bread.scss */
+.nav .news {
+  position: relative;
+}
+/* line 145, ../scss/bread.scss */
+.nav .news:after {
+  position: absolute;
+  content: "NEWS";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -5px;
+}
+/* line 154, ../scss/bread.scss */
+.nav .bread {
+  position: relative;
+}
+/* line 158, ../scss/bread.scss */
+.nav .bread:after {
+  position: absolute;
+  content: "BREAD";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -12px;
+}
+/* line 167, ../scss/bread.scss */
+.nav .access {
+  position: relative;
+}
+/* line 171, ../scss/bread.scss */
+.nav .access:after {
+  position: absolute;
+  content: "ACCESS";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -18px;
+}
+/* line 180, ../scss/bread.scss */
+.nav .contact {
+  position: relative;
+}
+/* line 184, ../scss/bread.scss */
+.nav .contact:after {
+  position: absolute;
+  content: "CONTACT";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -18px;
+}
+/* line 193, ../scss/bread.scss */
+.nav .online {
+  position: relative;
+}
+/* line 197, ../scss/bread.scss */
+.nav .online:after {
+  position: absolute;
+  content: "ONLINE SHOP";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -25px;
+}
+
+/* line 208, ../scss/bread.scss */
+.drawer-icon {
+  position: fixed;
+  right: 16px;
+  top: 20px;
+  z-index: 400;
+  display: none;
+  transition: transform 0.5s ease 0s;
+}
+@media (max-width: 767px) {
+  /* line 208, ../scss/bread.scss */
+  .drawer-icon {
+    display: block;
+  }
+}
+/* line 220, ../scss/bread.scss */
+.drawer-icon.is-active {
+  transform: translateX(-200px);
+}
+/* line 223, ../scss/bread.scss */
+.drawer-icon.is-active .drawer-icon__bar1 {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+/* line 227, ../scss/bread.scss */
+.drawer-icon.is-active .drawer-icon__bar2 {
+  display: none;
+}
+/* line 231, ../scss/bread.scss */
+.drawer-icon.is-active .drawer-icon__bar3 {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+/* line 239, ../scss/bread.scss */
+.drawer-icon__bars {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0;
+}
+
+/* line 246, ../scss/bread.scss */
+.drawer-icon__bar1,
+.drawer-icon__bar2,
+.drawer-icon__bar3 {
+  position: absolute;
+  background: #C0C0C0;
+  border: 1px solid #C0C0C0;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 4px;
+}
+
+/* line 258, ../scss/bread.scss */
+.drawer-icon__bar1 {
+  top: 0;
+}
+
+/* line 261, ../scss/bread.scss */
+.drawer-icon__bar2 {
+  top: 8px;
+}
+
+/* line 265, ../scss/bread.scss */
+.drawer-icon__bar3 {
+  top: 16px;
+}
+
+/* line 269, ../scss/bread.scss */
+.drawer-icon__label {
+  font-size: 50%;
+}
+
+/* line 273, ../scss/bread.scss */
+.drawer-content {
+  width: 200px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  z-index: 399;
+  transform: translateX(105%);
+  transition: transform 0.5s ease 0s;
+}
+/* line 285, ../scss/bread.scss */
+.drawer-content.is-active {
+  transform: translateX(0);
+}
+
+/* line 293, ../scss/bread.scss */
+.drawer-content__item {
+  border-bottom: 1px dotted #707070;
+}
+/* line 296, ../scss/bread.scss */
+.drawer-content__item a {
+  display: block;
+  color: #707070;
+  padding: 20px;
+  text-decoration: none;
+  position: relative;
+}
+/* line 303, ../scss/bread.scss */
+.drawer-content__item a::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 11px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 316, ../scss/bread.scss */
+.drawer-background {
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 398;
+  display: none;
+}
+/* line 326, ../scss/bread.scss */
+.drawer-background.is-active {
+  display: block;
+}
+
+/* line 341, ../scss/bread.scss */
+.main__header__inner {
+  background: url(../img/bread5.jpeg) no-repeat center center/cover;
+  width: 100%;
+  height: 200px;
+  margin-top: 50px;
+}
+/* line 347, ../scss/bread.scss */
+.main__header__inner h2 {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* line 355, ../scss/bread.scss */
+.bread__main {
+  margin-top: 100px;
+}
+
+/* line 361, ../scss/bread.scss */
+.bread__main__img {
+  display: flex;
+}
+
+/* line 365, ../scss/bread.scss */
+.bread__img {
+  width: calc(50% - 20px * 1 / 2);
+  margin-left: 20px;
+}
+/* line 370, ../scss/bread.scss */
+.bread__img:first-child {
+  margin-left: 0;
+}
+/* line 373, ../scss/bread.scss */
+.bread__img img {
+  border-radius: 10px;
+}
+
+/* line 377, ../scss/bread.scss */
+.bread__main__text {
+  margin-top: 50px;
+}
+
+/* line 382, ../scss/bread.scss */
+.bread__sub {
+  margin-top: 50px;
+}
+
+/* line 391, ../scss/bread.scss */
+.row-reverse {
+  flex-flow: row-reverse;
+}
+
+/* line 395, ../scss/bread.scss */
+.bread__sub__item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+/* line 399, ../scss/bread.scss */
+.bread__sub__img {
+  width: 50%;
+}
+/* line 401, ../scss/bread.scss */
+.bread__sub__img img {
+  border-radius: 10px;
+}
+
+/* line 405, ../scss/bread.scss */
+.bread__sub__text {
+  width: 50%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+/* line 417, ../scss/bread.scss */
+.footer4 {
+  font-size: 20px;
+  margin-top: 200px;
+}
+
+/* line 421, ../scss/bread.scss */
+.footer__inner4 {
+  display: flex;
+}
+
+/* line 424, ../scss/bread.scss */
+.footer__left4 {
+  width: 35%;
+}
+
+/* line 427, ../scss/bread.scss */
+.footer__nav4 {
+  padding-top: 50px;
+}
+/* line 429, ../scss/bread.scss */
+.footer__nav4 ul {
+  display: flex;
+}
+/* line 432, ../scss/bread.scss */
+.footer__nav4 li {
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+/* line 438, ../scss/bread.scss */
+.footer__center {
+  width: 45%;
+  padding-left: 30px;
+}
+
+/* line 448, ../scss/bread.scss */
+.footer__right4 {
+  width: 20%;
+}
+
+/* line 451, ../scss/bread.scss */
+.footer__logo4 {
+  text-align: center;
+}
+/* line 453, ../scss/bread.scss */
+.footer__logo4 img {
+  width: 220px;
+  height: 220px;
+}
+
+/* line 460, ../scss/bread.scss */
+.footer__sns4 ul {
+  display: flex;
+  justify-content: center;
+}
+/* line 464, ../scss/bread.scss */
+.footer__sns4 li {
+  margin-left: 30px;
+}
+
+/* line 468, ../scss/bread.scss */
+.copy__right {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  height: 30px;
+  padding-top: 15px;
+}
+
+/* line 475, ../scss/bread.scss */
+.access__info__line {
+  position: relative;
+}
+/* line 478, ../scss/bread.scss */
+.access__info__line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}

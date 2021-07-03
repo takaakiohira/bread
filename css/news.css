@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap");
+/* line 50, ../scss/news.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 56, ../scss/news.scss */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* line 62, ../scss/news.scss */
+body {
+  font-family: "Noto Serif JP", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+  background: #efe5cb;
+}
+
+/* line 70, ../scss/news.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 75, ../scss/news.scss */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 82, ../scss/news.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 86, ../scss/news.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 91, ../scss/news.scss */
+.inner {
+  width: 1300px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  /* line 91, ../scss/news.scss */
+  .inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* line 102, ../scss/news.scss */
+.section {
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  /* line 102, ../scss/news.scss */
+  .section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+
+/* line 113, ../scss/news.scss */
+.header {
+  height: 200px;
+  top: 0;
+  left: 0;
+  width: 1300px;
+  z-index: 300;
+  background: #bfc9bd;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  /* line 113, ../scss/news.scss */
+  .header {
+    height: 60px;
+  }
+}
+
+/* line 128, ../scss/news.scss */
+.header__inner {
+  align-items: center;
+  height: inherit;
+  display: flex;
+  width: 100%;
+}
+
+/* line 134, ../scss/news.scss */
+.nav {
+  margin: 0 auto;
+}
+/* line 136, ../scss/news.scss */
+.nav ul {
+  display: flex;
+}
+/* line 139, ../scss/news.scss */
+.nav li {
+  margin-left: 100px;
+}
+/* line 142, ../scss/news.scss */
+.nav li:first-child {
+  margin-left: 0;
+}
+/* line 150, ../scss/news.scss */
+.nav .home {
+  position: relative;
+}
+/* line 154, ../scss/news.scss */
+.nav .home:after {
+  position: absolute;
+  content: "HOME";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -5px;
+}
+/* line 163, ../scss/news.scss */
+.nav .news {
+  position: relative;
+}
+/* line 167, ../scss/news.scss */
+.nav .news:after {
+  position: absolute;
+  content: "NEWS";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -5px;
+}
+/* line 176, ../scss/news.scss */
+.nav .bread {
+  position: relative;
+}
+/* line 180, ../scss/news.scss */
+.nav .bread:after {
+  position: absolute;
+  content: "BREAD";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -12px;
+}
+/* line 189, ../scss/news.scss */
+.nav .access {
+  position: relative;
+}
+/* line 193, ../scss/news.scss */
+.nav .access:after {
+  position: absolute;
+  content: "ACCESS";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -18px;
+}
+/* line 202, ../scss/news.scss */
+.nav .contact {
+  position: relative;
+}
+/* line 206, ../scss/news.scss */
+.nav .contact:after {
+  position: absolute;
+  content: "CONTACT";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -18px;
+}
+/* line 215, ../scss/news.scss */
+.nav .online {
+  position: relative;
+}
+/* line 219, ../scss/news.scss */
+.nav .online:after {
+  position: absolute;
+  content: "ONLINE SHOP";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -25px;
+}
+
+/* line 230, ../scss/news.scss */
+.drawer-icon {
+  position: fixed;
+  right: 16px;
+  top: 20px;
+  z-index: 400;
+  display: none;
+  transition: transform 0.5s ease 0s;
+}
+@media (max-width: 767px) {
+  /* line 230, ../scss/news.scss */
+  .drawer-icon {
+    display: block;
+  }
+}
+/* line 242, ../scss/news.scss */
+.drawer-icon.is-active {
+  transform: translateX(-200px);
+}
+/* line 245, ../scss/news.scss */
+.drawer-icon.is-active .drawer-icon__bar1 {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+/* line 249, ../scss/news.scss */
+.drawer-icon.is-active .drawer-icon__bar2 {
+  display: none;
+}
+/* line 253, ../scss/news.scss */
+.drawer-icon.is-active .drawer-icon__bar3 {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+/* line 261, ../scss/news.scss */
+.drawer-icon__bars {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0;
+}
+
+/* line 268, ../scss/news.scss */
+.drawer-icon__bar1,
+.drawer-icon__bar2,
+.drawer-icon__bar3 {
+  position: absolute;
+  background: #C0C0C0;
+  border: 1px solid #C0C0C0;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 4px;
+}
+
+/* line 280, ../scss/news.scss */
+.drawer-icon__bar1 {
+  top: 0;
+}
+
+/* line 283, ../scss/news.scss */
+.drawer-icon__bar2 {
+  top: 8px;
+}
+
+/* line 287, ../scss/news.scss */
+.drawer-icon__bar3 {
+  top: 16px;
+}
+
+/* line 291, ../scss/news.scss */
+.drawer-icon__label {
+  font-size: 50%;
+}
+
+/* line 295, ../scss/news.scss */
+.drawer-content {
+  width: 200px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  z-index: 399;
+  transform: translateX(105%);
+  transition: transform 0.5s ease 0s;
+}
+/* line 307, ../scss/news.scss */
+.drawer-content.is-active {
+  transform: translateX(0);
+}
+
+/* line 315, ../scss/news.scss */
+.drawer-content__item {
+  border-bottom: 1px dotted #707070;
+}
+/* line 318, ../scss/news.scss */
+.drawer-content__item a {
+  display: block;
+  color: #707070;
+  padding: 20px;
+  text-decoration: none;
+  position: relative;
+}
+/* line 325, ../scss/news.scss */
+.drawer-content__item a::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 11px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 338, ../scss/news.scss */
+.drawer-background {
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 398;
+  display: none;
+}
+/* line 348, ../scss/news.scss */
+.drawer-background.is-active {
+  display: block;
+}
+
+/* line 363, ../scss/news.scss */
+.main__header__inner {
+  background: url(../img/bread5.jpeg) no-repeat center center/cover;
+  width: 100%;
+  height: 200px;
+}
+/* line 369, ../scss/news.scss */
+.main__header__inner h2 {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+  font-weight: 700;
+}
+
+/* line 386, ../scss/news.scss */
+.online__top__itmes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 390, ../scss/news.scss */
+.online__top__item {
+  width: calc(33.333% - 50px * 2 / 3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+  background: #bfc9bd;
+  color: #000;
+}
+/* line 398, ../scss/news.scss */
+.online__top__item:not(:nth-child(3n + 1)) {
+  margin-left: 50px;
+}
+@media (max-width: 767px) {
+  /* line 390, ../scss/news.scss */
+  .online__top__item {
+    width: 100%;
+    margin-top: 30px;
+  }
+  /* line 406, ../scss/news.scss */
+  .online__top__item:not(:nth-child(3n + 1)) {
+    margin-left: 30px;
+  }
+}
+
+/* line 422, ../scss/news.scss */
+.online__top__item-contain {
+  padding: 12px 10px 10px 10px;
+}
+
+/* line 426, ../scss/news.scss */
+.online-shop__item__line {
+  width: 100%;
+  height: 2px;
+  background: #bfc9bd;
+}
+
+/* line 432, ../scss/news.scss */
+.item__title {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* line 439, ../scss/news.scss */
+.item__meta p {
+  text-align: right;
+}
+
+/* line 444, ../scss/news.scss */
+.item__text {
+  margin-top: 5px;
+  padding: 10px;
+}
+/* line 447, ../scss/news.scss */
+.item__text p {
+  font-size: 20px;
+}
+
+/* line 451, ../scss/news.scss */
+.item__price {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
+}
+/* line 456, ../scss/news.scss */
+.item__price p {
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: underline;
+  text-align: right;
+}
+/* line 462, ../scss/news.scss */
+.item__price .item__price__price {
+  text-align: right;
+}
+
+/* line 471, ../scss/news.scss */
+.footer4 {
+  font-size: 20px;
+  margin-top: 200px;
+}
+
+/* line 475, ../scss/news.scss */
+.footer__inner4 {
+  display: flex;
+}
+
+/* line 478, ../scss/news.scss */
+.footer__left4 {
+  width: 35%;
+}
+
+/* line 483, ../scss/news.scss */
+.footer__nav4 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 487, ../scss/news.scss */
+.footer__nav4 li {
+  margin-left: 10px;
+}
+/* line 491, ../scss/news.scss */
+.footer__nav4 li:first-child {
+  margin-left: 0;
+}
+/* line 495, ../scss/news.scss */
+.footer__nav4 li:not(:nth-child(3n + 1)) {
+  margin-left: 110px;
+}
+/* line 500, ../scss/news.scss */
+.footer__nav4 li:nth-child(n + 4) {
+  margin-top: 24px;
+}
+/* line 508, ../scss/news.scss */
+.footer__nav4 .home {
+  position: relative;
+}
+/* line 512, ../scss/news.scss */
+.footer__nav4 .home:after {
+  position: absolute;
+  content: "HOME";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -5px;
+}
+/* line 521, ../scss/news.scss */
+.footer__nav4 .news {
+  position: relative;
+}
+/* line 525, ../scss/news.scss */
+.footer__nav4 .news:after {
+  position: absolute;
+  content: "NEWS";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -5px;
+}
+/* line 534, ../scss/news.scss */
+.footer__nav4 .bread {
+  position: relative;
+}
+/* line 538, ../scss/news.scss */
+.footer__nav4 .bread:after {
+  position: absolute;
+  content: "BREAD";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -12px;
+}
+/* line 547, ../scss/news.scss */
+.footer__nav4 .access {
+  position: relative;
+}
+/* line 551, ../scss/news.scss */
+.footer__nav4 .access:after {
+  position: absolute;
+  content: "ACCESS";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -18px;
+}
+/* line 560, ../scss/news.scss */
+.footer__nav4 .contact {
+  position: relative;
+}
+/* line 564, ../scss/news.scss */
+.footer__nav4 .contact:after {
+  position: absolute;
+  content: "CONTACT";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -18px;
+}
+/* line 573, ../scss/news.scss */
+.footer__nav4 .online {
+  position: relative;
+}
+/* line 577, ../scss/news.scss */
+.footer__nav4 .online:after {
+  position: absolute;
+  content: "ONLINE SHOP";
+  width: 130px;
+  height: 20px;
+  top: 30px;
+  left: -25px;
+}
+
+/* line 588, ../scss/news.scss */
+.footer__center {
+  width: 45%;
+  padding-left: 30px;
+}
+
+/* line 598, ../scss/news.scss */
+.footer__right4 {
+  width: 20%;
+}
+
+/* line 601, ../scss/news.scss */
+.footer__logo4 {
+  text-align: center;
+}
+/* line 603, ../scss/news.scss */
+.footer__logo4 img {
+  width: 220px;
+  height: 220px;
+}
+
+/* line 610, ../scss/news.scss */
+.footer__sns4 ul {
+  display: flex;
+  justify-content: center;
+}
+/* line 614, ../scss/news.scss */
+.footer__sns4 li {
+  margin-left: 30px;
+}
+
+/* line 618, ../scss/news.scss */
+.copy__right {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  height: 30px;
+  padding-top: 15px;
+}
+
+/* line 625, ../scss/news.scss */
+.access__info__line {
+  position: relative;
+}
+/* line 628, ../scss/news.scss */
+.access__info__line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
